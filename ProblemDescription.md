@@ -10,4 +10,7 @@ The spammer's goal is to drive traffic to their sites by making them show up on 
 The idea behind Page Rank is that more "important" pages would have more in-links from other "important" pages. The "Page Rank" algorithm assigns a rank(score) to a given pages based on the ranks of the pages that link to it. 
 
 Basically, the algorithm works by simulating random pages as starting points for webs surfers (called "random surfers”) and then calculating where the surfers would likely congregate if they followed randomly chosen outlinks from the starting point.
-A subset of the web can be represented as a directed graph of web pages, where pages are linked together by arrows. The direction of the arrows distinguish in-links from out-links. 
+
+### Page Rank With Teleportation
+
+###
