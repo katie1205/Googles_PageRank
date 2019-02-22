@@ -11,6 +11,13 @@ The idea behind Page Rank is that more "important" pages would have more in-link
 
 Basically, the algorithm works by simulating random pages as starting points for webs surfers (called "random surfers”) and then calculating where the surfers would likely congregate if they followed randomly chosen outlinks from the starting point.
 
-### Page Rank With Teleportation
+**Problems With Page Rank***
++ *Dead Ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
++ *Spider Traps* a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
 
-###
+**Solution: Teleportation**
+
+
+###Trust Rank
+
+###Topic Sensitive Page Rank
