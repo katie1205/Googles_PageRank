@@ -22,7 +22,12 @@ The iterative process of multiplying by M is called the power method, and here i
 
 To demonstrate how to apply the algorithm, let's calculate the page ranks of pages A,B,C, and D in the the above graph. Since we don't have much information about the importance of the pages, let's assume that each page is an equally likely starting point for a random surfer. Later on, we will discuss the limitations of this assumption and how google addressed that with Topic-Sensitive Page Rank.
 
-Since there are four pages, the probability (under the assumption of equal importance) that a random :surfer: will start on a given page is 1/4 = 0.25. We will store those probabilities in our starting vector, <b>v<sub>&lt;0&gt;</sub></b> = (0.25,0.25,0.25,0.25). Let the first, second, third, and fourth columns of "M" correspond to pages A,B,C, and D respectively. Let the first-fourth rows also correspond to A-D respectively. Then, construct M so that Mij is the probability that a surfer will travel from page j to page i as 1/(#number of outlinks) if j links to i, and zero otherwise. Then, the page ranks can be calculated by iterating through the matrix equation <b>v<sub>i-1</sub></b>=M<b>v<sub>i</sub></b> using a simple for loop, as shown in the function below. The for loop executes 1,000,000 iterations, but it's always a good idea to check the next iterations to ensure that a limit has actually been attained. To do that, multiply the output of the function by M a few more times. If the changes in the output for these iterations are insignificant, then you are in good shape. If not, then try increasing the 1,000,000 in the for loop. 
+Since there are four pages, the probability (under the assumption of equal importance) that a random :surfer: will start on a given page is 1/4 = 0.25. We will store those probabilities in our starting vector, <b>v<sub>0</sub></b> = (0.25,0.25,0.25,0.25). Let the first, second, third, and fourth columns of "M" correspond to pages A,B,C, and D respectively. Let the first-fourth rows also correspond to A-D respectively. Then, construct M so that Mij is the probability that a surfer will travel from page j to page i as 1/(#number of outlinks) if j links to i, and zero otherwise:
+M = <h: matrix> 0 | 1/2 | 0 | 1/3; 0 | 0 | 1/2 | 1/3; 0 | 1/2 | 0 | 1/3; 1 | 0 | 1/2 | 1/2 | 0 </h: matrix>
+
+
+
+Then, the page ranks can be calculated by iterating through the matrix equation <b>v<sub>i-1</sub></b>=M<b>v<sub>i</sub></b> using a simple for loop. The for loop executes 1,000,000 iterations, but it's always a good idea to check the next iterations to ensure that a limit has actually been attained. To do that, multiply the output of the function by M a few more times. If the changes in the output for these iterations are insignificant, then you are in good shape. If not, then try increasing the 1,000,000 in the for loop. 
 
 
 ```{r}
@@ -33,12 +38,6 @@ Page_Rank<-function(M,v){
   }
   print(v)
 }
-  
-
-  #Sample application:
-(v<-c(rep(1/4,4)))
-(M<-matrix(c(0,0,0,1,1/2,0,1/2,0,0,1/2,0,1/2,1/3,1/3,1/3,0),nrow=4,ncol=4))
-Page_Rank(M,v)
 ```
 
 Now let's define our variables v=v<sub>0</sub> and the transition Matrix M for the example.
