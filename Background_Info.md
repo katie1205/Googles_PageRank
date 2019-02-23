@@ -9,11 +9,11 @@ The spammer's goal is to drive traffic to their sites by making them show up on 
 ### PAGE RANK: Google's First Defense :cannon:
 The idea behind Page Rank is that more "important" pages would have more in-links from other "important" pages. The "Page Rank" algorithm assigns a rank(score) to a given pages based on the ranks of the pages that link to it. 
 
-Basically, the algorithm works by simulating random pages as starting points for webs surfers (called "random surfers” :surfer:) and then calculating where the surfers would likely congregate if they followed randomly chosen outlinks from the starting point.
+Basically, the algorithm works by simulating random pages as starting points for *random* :surfer:s (ie, a random web surfer) and then calculating where the random :surfer: would likely congregate if they followed randomly chosen outlinks from the starting point.
 
 **Problems With Page Rank***
-+ *Dead Ends* :skull: are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
-+ *Spider Traps* :spider: are a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
++ :skull: *ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
++ :spider: *traps* are a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
 
 **Solution: Teleportation**
 One solution to dead ends and :spider: traps is for the random :surfer: to have a small probability, 1 - &beta;, of teleporting rather than following the outlink from the current page. In this case, the iterative equation becomes: M<b>v</n> + (1 - &beta;)<b>e</b>/n
