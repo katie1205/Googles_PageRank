@@ -1,4 +1,4 @@
-# Google_Page_Rank
+# Google's Page Rank :google:
 
 # Problem
 It seems like spamming has been around since the dawn of the search engine! Over the years, google has developed algorithms to combat spamming. Spammers can be very resourceful, however, and have continually found clever workarounds. To build stronger defenses against spamming, it is essential to understand how these algorithms work.
