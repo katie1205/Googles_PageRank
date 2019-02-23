@@ -23,7 +23,12 @@ The iterative process of multiplying by M is called the power method, and here i
 To demonstrate how to apply the algorithm, let's calculate the page ranks of pages A,B,C, and D in the the above graph. Since we don't have much information about the importance of the pages, let's assume that each page is an equally likely starting point for a random surfer. Later on, we will discuss the limitations of this assumption and how google addressed that with Topic-Sensitive Page Rank.
 
 Since there are four pages, the probability (under the assumption of equal importance) that a random :surfer: will start on a given page is 1/4 = 0.25. We will store those probabilities in our starting vector, <b>v<sub>0</sub></b> = (0.25,0.25,0.25,0.25). Let the first, second, third, and fourth columns of "M" correspond to pages A,B,C, and D respectively. Let the first-fourth rows also correspond to A-D respectively. Then, construct M so that Mij is the probability that a surfer will travel from page j to page i as 1/(#number of outlinks) if j links to i, and zero otherwise:
-M = <h:matrix> 0 | 1/2 | 0 | 1/3 ; 0 | 0 | 1/2 | 1/3 ; 0 | 1/2 | 0 | 1/3 ; 1 | 0 | 1/2 | 1/2 | 0 </h:matrix>
+  | A |  B  |  C  |  D  |
+  | ------------------- |
+A | 0 | 1/2 |  0  | 1/3 |
+B | 0 |  0  | 1/2 | 1/3 |
+C | 0 | 1/2 |  0  | 1/3 |
+D | 1 |  0  | 1/2 | 1/2 | 
 
 
 
