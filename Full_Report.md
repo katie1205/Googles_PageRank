@@ -25,12 +25,12 @@ To demonstrate how to apply the algorithm, let's calculate the page ranks of pag
 Since there are four pages, the probability (under the assumption of equal importance) that a random :surfer: will start on a given page is 1/4 = 0.25. We will store those probabilities in our starting vector, <b>v<sub>0</sub></b> = (0.25,0.25,0.25,0.25). Let the first, second, third, and fourth columns of "M" correspond to pages A,B,C, and D respectively. Let the first-fourth rows also correspond to A-D respectively. Then, construct M so that Mij is the probability that a surfer will travel from page j to page i as 1/(#number of outlinks) if j links to i, and zero otherwise:
 
 
-  |  A  |  B  |  C  |  D  |
-  | --- | --- | --- | --- |
-A |  0  | 1/2 |  0  | 1/3 |
-B |  0  |  0  | 1/2 | 1/3 |
-C |  0  | 1/2 |  0  | 1/3 |
-D |  1  |  0  | 1/2 | 1/2 | 
+     |  A  |  B  |  C  |  D  |
+     | --- | --- | --- | --- |
+**A**|  0  | 1/2 |  0  | 1/3 |
+**B**|  0  |  0  | 1/2 | 1/3 |
+**C**|  0  | 1/2 |  0  | 1/3 |
+**D**|  1  |  0  | 1/2 | 1/2 | 
 
 
 
