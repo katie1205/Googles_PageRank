@@ -16,7 +16,7 @@ Basically, the algorithm works by simulating random pages as starting points for
 + *Spider Traps* a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
 
 **Solution: Teleportation**
-
+One solution to dead ends and spider traps is for the random surfer :surfer: to have a small probability of teleporting rather than follow the outlink from the current page.
 
 ###Trust Rank
 
