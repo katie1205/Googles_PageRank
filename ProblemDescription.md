@@ -2,7 +2,7 @@
 
 It seems like spamming has been around since the dawn of the search engine! Over the years, google has developed algorithms to combat spamming. Spammers can be very resourceful, however, and have continually found clever workarounds. To build stronger defenses against spamming, it is essential to understand how these algorithms work.
 
-## Spamming Techniques
+## Spamming :pig: Techniques
 The spammer's goal is to drive traffic to their sites by making them show up on search queries. Spammers put frequently or commonly searched keywords such as "movie" or "sports" on their pages. These keywords are usually the same color as the page’s background, rendering them invisible. Consequently, people whose searches contain the keywords are directed to the spammer's sites. Google's first defense against spamming was "Page Rank".
 
 ### PAGE RANK: Google's First Defense
