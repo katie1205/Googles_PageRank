@@ -41,7 +41,7 @@ Page_Rank<-function(M,v){
 Page_Rank(M,v)
 ```
 
-Now let's define our variables v=v<sub>0</0> and the transition Matrix M for the example.
+Now let's define our variables v=v<sub>0</sub> and the transition Matrix M for the example.
 
 ```{r}
 (v_0<-c(rep(1/4,4))) #Vector v_0 
