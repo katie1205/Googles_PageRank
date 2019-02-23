@@ -9,7 +9,15 @@ The spammer's goal is to drive traffic to their sites by making them show up on 
 ### PAGE RANK: Google's First Defense :oncoming_police_car:
 The idea behind Page Rank is that more "important" pages would have more in-links from other "important" pages. The "Page Rank" algorithm assigns a rank(score) to a given pages based on the ranks of the pages that link to it. 
 
-Basically, the algorithm works by simulating random pages as starting points for *random* :surfer:s (ie, random person surfing the web) and then calculating where the random :surfer: would likely congregate if they followed randomly chosen outlinks from the starting point.
+Basically, the algorithm works by simulating random pages as starting points for *random* :surfer:s (ie, random person surfing the web) and then calculating where the random :surfer: would likely congregate if they followed randomly chosen outlinks from the starting point. 
+
+Imagine a set of web pages that are "connected" through in-links and out-links, as shown in the connected graph below. This graph is said to be strongly connected, since you can get to any page in the graph via any other page in the graph. Graphs that are not strongly connected must be dealt with differently, as explained later. 
+
+![](https://github.com/katie1205/Google_Page_Rank/blob/master/strongly_connected.PNG)
+
+To demonstrate how to apply the algorithm, let's calculate the page ranks of pages A,B,C, and D in the the above graph. Since we don't have much information about the importance of the pages, let's assume that each page is an equally likely starting point for a random surfer. Later on, we will discuss the limitations of this assumption and how google addressed that with Topic-Sensitive Page Rank.
+
+Since there are four pages, the probability (under the assumption of equal importance) that a random :surfer: will start on a given page is 1/4 = 0.25. We will store those probabilities in our starting vector, <b>v<sub><0></sub></b> = (0.25,0.25,0.25,0.25). The matrix, M, page ranks can be calculated by iterating through the matrix equation <b>v<sub>i-1</sub></b>=M<b>v<sub>i</sub></b>
 
 **Problems With Page Rank***
 + :skull: *ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
