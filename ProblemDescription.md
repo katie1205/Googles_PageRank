@@ -1,6 +1,5 @@
-# Google's Page Rank :google:
+# Google's Page Rank
 
-# Problem
 It seems like spamming has been around since the dawn of the search engine! Over the years, google has developed algorithms to combat spamming. Spammers can be very resourceful, however, and have continually found clever workarounds. To build stronger defenses against spamming, it is essential to understand how these algorithms work.
 
 ## Spamming Techniques
@@ -16,7 +15,8 @@ Basically, the algorithm works by simulating random pages as starting points for
 + *Spider Traps* a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
 
 **Solution: Teleportation**
-One solution to dead ends and spider traps is for the random surfer :surfer: to have a small probability, 1 - <img src="https://latex.codecogs.com/gif.latex?{\beta}" /> of teleporting rather than follow the outlink from the current page.
+One solution to dead ends and spider traps is for the random surfer :surfer: to have a small probability, 1 - <img src="https://latex.codecogs.com/gif.latex?{\beta}" /> of teleporting rather than following the outlink from the current page. In this case, the iterative equation becomes:
+<img src="https://latex.codecogs.com/gif.latex?{\beta}/>M**v** + (<img src="https://latex.codecogs.com/gif.latex?{1-{\beta}>) **e**/n
 
 ### Trust Rank
 
