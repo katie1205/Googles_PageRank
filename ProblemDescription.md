@@ -16,7 +16,7 @@ Basically, the algorithm works by simulating random pages as starting points for
 
 **Solution: Teleportation**
 One solution to dead ends and spider traps is for the random surfer :surfer: to have a small probability, 1 - <img src="https://latex.codecogs.com/gif.latex?{\beta}" /> of teleporting rather than following the outlink from the current page. In this case, the iterative equation becomes:
-<img src="https://latex.codecogs.com/gif.latex?{\beta}"/>M**v** + (<img src="https://latex.codecogs.com/gif.latex?{(1-{\beta})"/> **e**/n
+<img src="https://latex.codecogs.com/gif.latex?{\beta}"/>M**v**+<img src="https://latex.codecogs.com/gif.latex?{(1-{\beta})"/>**e**/n
 
 ### Trust Rank
 
