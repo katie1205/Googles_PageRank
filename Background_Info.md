@@ -6,10 +6,10 @@ It seems like spamming has been around since the dawn of the search engine! Over
 The spammer's goal is to drive traffic to their sites by making them show up on search queries. Spammers put frequently or commonly searched keywords such as "movie" or "sports" on their pages. These keywords are usually the same color as the page’s background, rendering them invisible. Consequently, people whose searches contain the keywords are directed to the spammer's sites. Google's first defense against spamming was "Page Rank".
 
 
-### PAGE RANK: Google's First Defense :cannon:
+### PAGE RANK: Google's First Defense :oncoming_police_car:
 The idea behind Page Rank is that more "important" pages would have more in-links from other "important" pages. The "Page Rank" algorithm assigns a rank(score) to a given pages based on the ranks of the pages that link to it. 
 
-Basically, the algorithm works by simulating random pages as starting points for *random* :surfer:s (ie, a random web surfer) and then calculating where the random :surfer: would likely congregate if they followed randomly chosen outlinks from the starting point.
+Basically, the algorithm works by simulating random pages as starting points for *random* :surfer:s (ie, random person surfing the web) and then calculating where the random :surfer: would likely congregate if they followed randomly chosen outlinks from the starting point.
 
 **Problems With Page Rank***
 + :skull: *ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
