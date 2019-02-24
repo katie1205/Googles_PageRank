@@ -72,8 +72,10 @@ The intial page rank algorithm does not yield meaningful results for networks th
 + :skull: *dead ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
 + :spider: *spider traps* are a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
 
-**Solution: Teleportation** :rocket: :alien:
-One solution to dead ends and :spider: traps is for the random :surfer: to have a small probability, 1 - &beta;, of teleporting rather than following the outlink from the current page. In this case, the iterative equation becomes: 
+**Solutions**
+Google addressed these issues by modifying the algorithm as follows:
++ removing :skull: ends: removes dead-ends recursively from a network before applying the page rank algorithm
++ teleporting :rocket: gives the random :surfer: to have a small probability, 1 - &beta;, of teleporting to another page. In this case, the iterative equation becomes: 
 M<b>v</b> + (1 - &beta;)<b>e</b>/n
 
 ### Topic Sensitive Page Rank
