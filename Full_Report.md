@@ -72,6 +72,7 @@ The intial page rank algorithm does not yield meaningful results for networks th
 + :spider: *spider traps* are a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
 
 Example of a one-node spider trap:
+
 ![](https://github.com/katie1205/Google_Page_Rank/blob/master/spider_Trap.PNG)
 
 **Solutions**
