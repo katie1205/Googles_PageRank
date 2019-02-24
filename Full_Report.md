@@ -74,7 +74,7 @@ The intial page rank algorithm does not yield meaningful results for networks th
 **Solutions**
 Google addressed these issues by modifying the algorithm as follows:
 + removing :skull: ends: removes dead-ends recursively from a network before applying the page rank algorithm
-+ teleporting :rocket: gives the random :surfer: to have a small probability, 1 - &beta;, of teleporting to another page. In this case, the iterative equation becomes: 
++ teleporting :rocket:: allows the random :surfer: to have a small probability, 1 - &beta;, of teleporting to another page. In this case, the iterative equation becomes: 
 M<b>v</b> + (1 - &beta;)<b>e</b>/n
 
 ### Topic Sensitive Page Rank
