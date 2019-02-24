@@ -68,17 +68,16 @@ Page_Rank(M,v)
 ```
 
 ### Problems With Page Rank
-The intial page rank algorithm can only yield meaningful results for networks that are strongly connected.
-+ :skull: *ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
-+ :spider: *traps* are a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
+The intial page rank algorithm does not yield meaningful results for networks that are not strongly connected. Two examples of such networks are those that contain *dead ends* or *spider traps*, as described below.
++ :skull: *dead ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
++ :spider: *spider traps* are a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
 
-**Solution: Teleportation**
+**Solution: Teleportation** :rocket: :alien:
 One solution to dead ends and :spider: traps is for the random :surfer: to have a small probability, 1 - &beta;, of teleporting rather than following the outlink from the current page. In this case, the iterative equation becomes: 
 M<b>v</b> + (1 - &beta;)<b>e</b>/n
 
 ### Topic Sensitive Page Rank
 Teleportation was used to address the problematic assumption made by the initial Page Rank algorithm that all in-links are treated as equally important to the random :surfer:. Topic Sensitive Page Rank evaluates web pages according not just to popularity, but also to how closely related the page is are to a particular topic- eg “sports”. This allows queries to be answered based on interests of user. Topic Sensitive Page Rank works by modifying teleportation part of page rank equation to only teleport to relevant pages (the teleport set).
-
 
 ### Trust Rank
 Trust rank is a type of topic sensitive page rank in which the teleport set consists of "trusted" pages. 
