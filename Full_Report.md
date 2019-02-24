@@ -75,7 +75,7 @@ The intial page rank algorithm does not yield meaningful results for networks th
 Google addressed these issues by modifying the algorithm as follows:
 + removing :skull: ends: removes dead-ends recursively from a network before applying the page rank algorithm
 + teleporting :rocket:: allows the random :surfer: to have a small probability, 1 - &beta;, of teleporting to another page. In this case, the iterative equation becomes: 
-M<b>v</b> + (1 - &beta;)<b>e</b>/n, where n is the number of pages in the network.
+&beta;M<b>v</b> + (1 - &beta;)<b>e</b>/n, where n is the number of pages in the network.
 
 Here is an r function to estimate Page Rank with the teleportation modification:
 ```{r}
@@ -87,7 +87,7 @@ Here is an r function to estimate Page Rank with the teleportation modification:
 Page_Rank_2<-function(M,v,Beta){
   n<-length(v)
   for (i in c(1:1000000)){
-    v<-M%*%v + (1-Beta)*c(rep(1/n),n)
+    v<-Beta*M%*%v + (1-Beta)*c(rep(1/n),n)
   }
 }
 ```
