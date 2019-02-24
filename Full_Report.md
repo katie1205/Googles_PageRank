@@ -3,13 +3,13 @@
 It seems like spamming has been around since the dawn of the search engine! Over the years, google has developed algorithms to combat spamming. Spammers can be very resourceful, however, and have continually found clever workarounds. To build stronger defenses against spamming, it is essential to understand how these algorithms work.
 
 ## Spamming :pig: Techniques
-The spammer's ultimate goal is to drive more traffic to their sites. To show up in more search queries, spammers put frequently or commonly searched keywords such as "movie" or "sports" on their pages. These keywords are usually the same color as the page’s background, rendering them invisible. Consequently, people whose searches contain the keywords are directed to the spammer's sites. Google's first defense against spamming was "Page Rank".
+The spammer's ultimate goal is to drive more traffic to their sites. Spammer's will employ clever tricks to show up in common search queries. For example, a spammer may put frequently searched key words, like "movie" or "sports", on their pages. Consequently, people whose searches contain the keywords are directed to the spammer's sites. 
 
 
 ## PAGE RANK: Google's First Defense :oncoming_police_car:
 The idea behind Page Rank is that more "important" pages are more likely to receive in-links from other "important" pages. The "Page Rank" algorithm assigns a rank(score) to a given pages based on the ranks of the pages that link to it.
 
-Basically, the algorithm works by randomly selecting pages as starting points for *random* :surfer:s (ie, random person surfing the web) and then calculating where the random :surfer: would likely congregate if they followed randomly chosen outlinks from the starting point.
+Basically, the algorithm works by estimating the likelihood that a *random* :surfer:s (ie, random person surfing the web) would end up at a page if they followed randomly chosen outlinks from their starting point.
 
 A set of linked web pages can represented as a <i> directed graph </i>, where nodes representing the pages are linked together by arrows. The direction of the arrows distinguish in-links from out-links. A page points Below is an example of a directed graph that is <i>strongly connected</i>, meaning that you can get to any one web page/node via any other node.
 
@@ -66,12 +66,9 @@ Finally, let's apply our page_rank function to M and v<sub>0</sub>
 ```{r}
 Page_Rank(M,v)
 ```
-The result of the above function was:
 
-|  v  |
-| 
-
-**Problems With Page Rank***
+### Problems With Page Rank
+The intial page rank algorithm can only yield meaningful results for networks that are strongly connected.
 + :skull: *ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
 + :spider: *traps* are a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
 
@@ -80,6 +77,8 @@ One solution to dead ends and :spider: traps is for the random :surfer: to have 
 M<b>v</b> + (1 - &beta;)<b>e</b>/n
 
 ### Topic Sensitive Page Rank
+Teleportation was used to address the problematic assumption made by the initial Page Rank algorithm that all in-links are treated as equally important to the random :surfer:. Topic Sensitive Page Rank evaluates web pages according not just to popularity, but also to how closely related the page is are to a particular topic- eg “sports”. This allows queries to be answered based on interests of user. Topic Sensitive Page Rank works by modifying teleportation part of page rank equation to only teleport to relevant pages (the teleport set).
+
 
 ### Trust Rank
 Trust rank is a type of topic sensitive page rank in which the teleport set consists of "trusted" pages. 
