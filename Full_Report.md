@@ -68,8 +68,11 @@ Page_Rank(M,v)
 
 ### Problems With Page Rank
 The intial page rank algorithm does not yield meaningful results for networks that are not strongly connected. Two examples of such networks are those that contain *dead ends* or *spider traps*, as described below.
-+ :skull: *dead ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”. 
++ :skull: *dead ends* are pages that have no out links. Consequently, the random walk goes nowhere, causing importance to “leak out”.
 + :spider: *spider traps* are a groups of pages for which all outlinks are within the group. Consequently, a random walk gets “stuck” in the trap and absorbs all of the importance.
+
+Example of a one-node spider trap:
+![](https://github.com/katie1205/Google_Page_Rank/blob/master/spider_Trap.PNG)
 
 **Solutions**
 Google addressed these issues by modifying the algorithm as follows:
