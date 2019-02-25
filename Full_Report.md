@@ -35,10 +35,10 @@ Let the first, second, third, and fourth columns of "M" correspond to pages A,B,
 
 |     |  A  |  B  |  C  |  D  |
 | --- | --- | --- | --- | --- |
-|  B  |  0  | 1/2 |  0  | 1/3 |
-|  C  |  0  |  0  | 1/2 | 1/3 |
-|  D  |  0  | 1/2 |  0  | 1/3 |
-|  E  |  1  |  0  | 1/2 |  0  | 
+|  A  |  0  | 1/2 |  0  | 1/3 |
+|  B  |  0  |  0  | 1/2 | 1/3 |
+|  C  |  0  | 1/2 |  0  | 1/3 |
+|  D  |  1  |  0  | 1/2 |  0  | 
 
 
 Then, the page ranks can be calculated by iterating through the matrix equation <b>v<sub>i-1</sub></b>=M<b>v<sub>i</sub></b> using a simple for loop. The for loop executes 1,000,000 iterations, but it's always a good idea to check the next iterations to ensure that a limit has actually been attained. To do that, multiply the output of the function by M a few more times. If the changes in the output for these iterations are insignificant, then you are in good shape. If not, then try increasing the 1,000,000 in the for loop. 
