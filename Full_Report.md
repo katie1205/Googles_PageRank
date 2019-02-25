@@ -98,6 +98,6 @@ Page_Rank_2<-function(M,v,Beta){
 
 ### Topic Sensitive Page Rank
 Teleportation was used to address the problematic assumption made by the initial Page Rank algorithm that all in-links are treated as equally important to the random :surfer:. Topic Sensitive Page Rank evaluates web pages according not just to popularity, but also to how closely related the page is are to a particular topic- eg “sports”. This allows queries to be answered based on interests of user. Topic Sensitive Page Rank works by modifying teleportation part of page rank equation to only teleport to relevant pages (the teleport set). 
-
+ 
 ### Trust Rank
 Trust rank is a type of topic sensitive page rank in which the teleport set consists of "trusted" pages. 
